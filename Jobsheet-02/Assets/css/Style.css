@@ -127,13 +127,15 @@ td button {
     font-size: 0.85rem;
 }
 
-td button:nth-of-type(2) {
-    background-color: #f0ad4e;
-    color: #fff;
-}
+
 
 td button:first-of-type {
     background-color: #5bc0de;
+    color: #fff;
+}
+
+td button:nth-of-type(2) {
+    background-color: #f0ad4e;
     color: #fff;
 }
 
