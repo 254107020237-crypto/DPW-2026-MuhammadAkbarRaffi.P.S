@@ -200,6 +200,12 @@ footer {
         position: relative;
     }
 
+@media (max-width: 1400px) {
+    main {
+        max-width: 1000px;
+    }
+}
+
     .nav-toggle-label {
         display: block;
     }
