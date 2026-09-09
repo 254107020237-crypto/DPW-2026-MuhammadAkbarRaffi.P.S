@@ -1,3 +1,4 @@
+/* ===== Reset & Base ===== */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -18,6 +19,18 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+/* ===== Header & Navbar (Flexbox) ===== */
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    display: none;
+    font-size: 1.6rem;
+    color: #fff;
+    cursor: pointer;
 }
 
 header {
@@ -45,6 +58,31 @@ header nav a {
     font-weight: 500;
 }
 
+header {
+    position: relative;
+}
+
+.nav-toggle-label {
+    display: block;
+}
+
+header nav {
+    display: none;
+    width: 100%;
+    order: 3;
+    margin-top: 1rem;
+}
+
+.nav-toggle:checked ~ nav {
+    display: block;
+}
+
+header nav ul {
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+/* ===== Main Layout ===== */
 main {
     max-width: 1000px;
     margin: 2rem auto;
@@ -64,9 +102,10 @@ section h2 {
     color: #1d5b8a;
 }
 
+/* ===== Kartu Statistik (CSS Grid) ===== */
 main section:nth-of-type(2) {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
 }
 
@@ -89,12 +128,14 @@ main section:nth-of-type(2) article p {
     color: #1d5b8a;
 }
 
+/* ===== Tabel ===== */
 table {
     width: 100%;
     border-collapse: collapse;
 }
 
-th, td {
+th,
+td {
     text-align: left;
     padding: 0.65rem 0.75rem;
     border-bottom: 1px solid #e2e6ea;
@@ -122,12 +163,27 @@ td button {
     font-size: 0.85rem;
 }
 
-td button:first-of-type {
+/* td button:first-of-type {
     background-color: #f0ad4e;
     color: #fff;
 }
 
 td button:last-of-type {
+    background-color: #d9534f;
+    color: #fff;
+} */
+
+td button.btn-edit {
+    background-color: #f0ad4e;
+    color: #fff;
+}
+
+td button.btn-detail {
+    background-color: #1d5b8a;
+    color: #fff;
+}
+
+td button.btn-hapus {
     background-color: #d9534f;
     color: #fff;
 }
@@ -168,6 +224,7 @@ form button[type="submit"]:hover {
     background-color: #164869;
 }
 
+/* ===== Footer ===== */
 footer {
     text-align: center;
     padding: 1.25rem;
@@ -175,27 +232,21 @@ footer {
     font-size: 0.9rem;
 }
 
+/* ===== Tabel Responsif ===== */
 .table-responsive {
     overflow-x: auto;
 }
 
-.nav-toggle {
-    display: none;
-}
+/* ===== Responsive Breakpoints ===== */
 
-.nav-toggle-label {
-    display: none;
-    font-size: 1.6rem;
-    color: #fff;
-    cursor: pointer;
-}
-
+/* Tablet ke bawah */
 @media (max-width: 768px) {
     main section:nth-of-type(2) {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
+/* Mobile */
 @media (max-width: 480px) {
     header {
         position: relative;
