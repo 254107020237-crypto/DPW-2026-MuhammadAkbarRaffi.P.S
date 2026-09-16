@@ -14,9 +14,9 @@ Jobsheet-05/
 │   └── tambah.html
 |── assets/
 |   |── css/
-        |── style.css
-    |── js/
-        |── app.js
+|        |── style.css
+|   |── js/
+|        |── app.js
 ├── Buku/
 │   ├── list.html
 │   └── tambah.html
