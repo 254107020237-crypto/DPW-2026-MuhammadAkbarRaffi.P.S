@@ -25,7 +25,7 @@ Jobsheet-07/
 ├── includes/
 |   ├── footer.php
 |   └── header.php
-└── index.html
+└── index.php
 ```  
 
 ## Ringkasan
