@@ -13,7 +13,7 @@ body {
 }
 
 a {
-    color: #1d5b8a;
+    color: #2563eb;
     text-decoration: none;
 }
 
@@ -25,14 +25,17 @@ a:hover {
 /* ===== Header & Navbar (Flexbox) ===== */
 
 header {
-    background-color: #1d5b8a;
+    background: linear-gradient(135deg, #1e40af 0%, #06b6d4 100%);
     color: #fff;
     padding: 1rem 1.5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
 }
 
 header h1 {
@@ -76,6 +79,10 @@ header nav a {
 
 /* ===== Main Layout ===== */
 
+main section:first-of-type {
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); /* Gradasi biru sangat muda ke biru langit */
+}
+
 main {
     max-width: 1000px;
     margin: 2rem auto;
@@ -92,7 +99,7 @@ section {
 
 section h2 {
     margin-bottom: 1rem;
-    color: #1d5b8a;
+    color: #2563eb;
 }
 
 
@@ -109,10 +116,17 @@ main section:nth-of-type(2) h2 {
 }
 
 main section:nth-of-type(2) article {
-    background-color: #eef4fa;
-    border-radius: 8px;
+    background: linear-gradient(135deg, #f0f9ff 0%, #ffffff 100%);
+    border-radius: 12px;
     padding: 1.25rem;
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Tambahan baru untuk efek hover */
+main section:nth-of-type(2) article:hover {
+    transform: translateY(-5px); /* Kartu naik sedikit */
+    box-shadow: 0 8px 15px rgba(29, 91, 138, 0.15); /* Bayangan membesar */
 }
 
 main section:nth-of-type(2) article h3 {
@@ -124,7 +138,7 @@ main section:nth-of-type(2) article h3 {
 main section:nth-of-type(2) article p {
     font-size: 1.8rem;
     font-weight: 700;
-    color: #1d5b8a;
+    color: #1e40af; /* Warna biru gelap */
 }
 
 
@@ -143,7 +157,7 @@ td {
 }
 
 thead {
-    background-color: #1d5b8a;
+    background: linear-gradient(135deg, #1e40af 0%, #0ea5e9 100%);
     color: #fff;
 }
 
@@ -162,6 +176,18 @@ td button {
     border-radius: 4px;
     cursor: pointer;
     font-size: 0.85rem;
+}
+
+td button, 
+form button[type="submit"] {
+    transition: all 0.2s ease-in-out; /* Animasi halus */
+}
+
+td button:hover, 
+form button[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    filter: brightness(1.1); /* Membuat warna tombol sedikit lebih terang */
 }
 
 /* Tombol Edit */
@@ -205,7 +231,7 @@ form select {
 }
 
 form button[type="submit"] {
-    background-color: #1d5b8a;
+    background: linear-gradient(135deg, #1e40af 0%, #0ea5e9 100%);
     color: #fff;
     border: none;
     padding: 0.6rem 1.5rem;
@@ -216,6 +242,33 @@ form button[type="submit"] {
 
 form button[type="submit"]:hover {
     background-color: #164869;
+}
+
+td button, 
+form button[type="submit"] {
+    transition: all 0.2s ease-in-out; /* Animasi halus */
+}
+
+td button:hover, 
+form button[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    filter: brightness(1.1); /* Membuat warna tombol sedikit lebih terang */
+}
+
+form input,
+form select,
+.search-box input {
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efek saat input sedang diklik/diisi */
+form input:focus,
+form select:focus,
+.search-box input:focus {
+    outline: none;
+    border-color: #1d5b8a;
+    box-shadow: 0 0 0 3px rgba(29, 91, 138, 0.2); /* cincin cahaya warna biru */
 }
 
 
@@ -231,6 +284,8 @@ footer {
 /* ===== Tabel Responsif ===== */
 .table-responsive {
     overflow-x: auto;
+    border-radius: 8px; /* tambahan */
+    box-shadow: 0 0 5px rgba(0,0,0,0.05); /* tambahan bayangan tipis */
 }
 
 /* ===== Pesan Error Validasi ===== */
