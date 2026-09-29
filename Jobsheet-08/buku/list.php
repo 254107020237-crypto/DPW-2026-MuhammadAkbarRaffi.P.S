@@ -44,7 +44,8 @@ $daftarBuku = $pdo->query("SELECT * FROM buku ORDER BY id DESC")->fetchAll(PDO::
                             <td><?php echo $buku['tahun']; ?></td>
                             <td><?php echo $buku['stok']; ?></td>
                             <td>
-                                <button type="button">Edit</button>
+                                <button type="button" class="btn-edit">Edit</button>
+                                <button type="button" class="btn-detail">Detail</button>
                                 <button type="button" class="btn-hapus">Hapus</button>
                             </td>
                         </tr>

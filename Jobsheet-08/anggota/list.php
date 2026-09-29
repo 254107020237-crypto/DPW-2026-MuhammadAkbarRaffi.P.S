@@ -44,7 +44,8 @@ $daftarAnggota = $pdo->query("SELECT * FROM anggota ORDER BY id DESC")->fetchAll
                             <td><?php echo $anggota['alamat']; ?></td>
                             <td><?php echo $anggota['no_hp']; ?></td>
                             <td>
-                                <button type="button">Edit</button>
+                                <button type="button" class="btn-edit">Edit</button>
+                                <button type="button" class="btn-detail">Detail</button>
                                 <button type="button" class="btn-hapus">Hapus</button>
                             </td>
                         </tr>
